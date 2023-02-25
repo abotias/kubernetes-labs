@@ -61,6 +61,12 @@ NAME        TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
 wordpress   NodePort   10.245.6.175   <none>        80:31000/TCP   95s
 ```
 
+## Delete service
+
+```sh
+kubectl -n testing delete svc wordpress
+```
+
 ### Replication Controller
 
 ```sh
@@ -72,6 +78,13 @@ adrian@ADRIANLT:~/kubernetes-labs/wordpress$ kubectl -n testing get pods
 NAME              READY   STATUS    RESTARTS   AGE
 wordpress-lltlm   1/1     Running   0          56s
 ```
+
+### Delete pod
+
+```sh
+kubectl -n testing delete pod wordpress-lltlm
+```
+
 
 ## Access
 
